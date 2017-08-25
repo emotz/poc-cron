@@ -1,5 +1,5 @@
 {
-  "name": "mysql2csv_with_cron",
+  "name": "poc-cron",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
