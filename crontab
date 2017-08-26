@@ -2,3 +2,4 @@ PATH=/usr/local/bin:/bin
 
 * * * * * root /script.sh >> /var/log/hello-cron.log 2>&1
 # An empty line is required at the end of this file for a valid cron file.
+# https://en.wikipedia.org/wiki/Cron#crontab_syntax
