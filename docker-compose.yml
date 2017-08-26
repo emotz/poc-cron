@@ -5,6 +5,8 @@ services:
     build: .
     depends_on:
       - mysql
+    volumes:
+      - ./export:/src/export
     environment:
       MYSQL_USER: "root"
       MYSQL_PASSWORD: "my-secret-pw"
