@@ -3,7 +3,6 @@
 const mysql = require('mysql');
 const log = require('./log')(module);
 
-log.debug("process.env", process.env);
 const config = parseConfig(process.env);
 log.debug("Using config", config);
 dowork(config);
