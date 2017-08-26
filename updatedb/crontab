@@ -1,0 +1,6 @@
+PATH=/usr/local/bin:/bin
+
+# */2 * * * * root /script.sh >> /var/log/updatedb-cron.log 2>&1
+* * * * * root /script.sh >> /var/log/updatedb-cron.log 2>&1
+# An empty line is required at the end of this file for a valid cron file.
+# https://en.wikipedia.org/wiki/Cron#crontab_syntax

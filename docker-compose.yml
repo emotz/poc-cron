@@ -3,3 +3,11 @@ version: '3.2'
 services:
   main:
     build: .
+
+  updatedb:
+    build: updatedb
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo

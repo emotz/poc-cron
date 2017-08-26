@@ -1,0 +1,11 @@
+{
+  "bin": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.31",
+    "winston": "^2.3.1"
+  }
+}
