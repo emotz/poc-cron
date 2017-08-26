@@ -3,6 +3,13 @@ version: '3.2'
 services:
   main:
     build: .
+    depends_on:
+      - mysql
+    environment:
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "my-secret-pw"
+      MYSQL_HOST: "mysql"
+      MYSQL_DB: "my_db"
 
   updatedb:
     build: updatedb

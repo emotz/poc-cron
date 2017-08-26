@@ -19,13 +19,13 @@ function dowork(config) {
         if (err) handleError(err, "Error connecting to database");
         log.info("Connected to database as id", connection.threadId);
 
-        connection.query('CREATE DATABASE IF NOT EXISTS my_db', function (err) {
+        connection.query(`CREATE DATABASE IF NOT EXISTS ${config.mysql.database}`, function (err) {
             if (err) handleError(err, "Error creating database");
 
             connection.changeUser({ database: config.mysql.database }, function (err) {
                 if (err) handleError(err, "Couldn't change database for the connection");
 
-                connection.query('CREATE TABLE IF NOT EXISTS mytable (id INT, name CHAR(100), title CHAR(50))', function (err) {
+                connection.query('CREATE TABLE IF NOT EXISTS mytable (id INT NOT NULL AUTO_INCREMENT, name CHAR(100), title CHAR(50), PRIMARY KEY (id))', function (err) {
                     if (err) handleError(err, "Error creating table");
 
                     const entry = generateEntry();

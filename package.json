@@ -10,8 +10,13 @@
   },
   "author": "emotz",
   "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.5.0"
+  },
   "dependencies": {
-    "eslint": "^4.5.0",
+    "fs-extra": "^4.0.1",
+    "json2csv": "^3.11.1",
+    "mysql": "^2.14.1",
     "winston": "^2.3.1"
   }
 }
