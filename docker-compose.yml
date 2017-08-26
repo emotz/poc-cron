@@ -7,7 +7,13 @@ services:
   updatedb:
     build: updatedb
     depends_on:
-      - mongo
-
-  mongo:
-    image: mongo
+      - mysql
+    environment:
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "my-secret-pw"
+      MYSQL_HOST: "mysql"
+      MYSQL_DB: "my_db"
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "my-secret-pw"
